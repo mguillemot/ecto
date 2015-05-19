@@ -29,7 +29,7 @@ defmodule Ecto.Changeset do
             errors: [], validations: [], required: [], optional: [],
             filters: %{}
 
-  @type error :: {atom, atom | {atom, [term]}}
+  @type error :: {atom, atom | String.t | {String.t, number}}
   @type t :: %Changeset{valid?: boolean(),
                         repo: atom | nil,
                         model: Ecto.Model.t | nil,
